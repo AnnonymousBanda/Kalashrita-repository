@@ -1,0 +1,118 @@
+:root
+{
+    --main-color: #7a0b08;
+    --second-color: #E7E7E7;
+
+    --corner-radius: 10px;
+    --font-btn: 18px;
+}
+
+#product i
+{
+    border-radius: var(--corner-radius);
+    border: 2px var(--main-color) solid;
+    background: var(--second-color);
+}
+
+#product i:hover
+{
+    text-decoration: none;
+}
+
+.catalogue h1
+{
+    color: var(--main-color);
+    font-size: 3rem;
+}
+
+.catalogue
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+    padding: 100px 20px 10% 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.catalogue-content
+{
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    align-items: center;
+    gap: 2rem;
+}
+
+.catalogue-content .container
+{
+    border-radius: var(--corner-radius);
+    border: 2px var(--main-color) solid;
+    overflow: hidden;
+}
+
+.container .layer
+{
+    width: 100%;
+    height: 0%;
+    position: relative;
+    top: 0;
+    left: 0;
+
+    font-size: var(--font-btn);
+    color: var(--second-color);
+    font-size: 0px;
+    font-weight: 600;
+    background: linear-gradient( rgba(122, 11, 8, 0.8), rgba(0, 0, 0, 0.5));
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    
+    transition: all 0.55s ease;
+}
+
+.container:hover .layer
+{    
+    font-size: var(--font-btn);
+    height: 100%;
+}
+
+.container .layer a
+{
+    cursor: pointer;
+    transition: scale 0.55s ease;
+}
+
+.container .layer a:hover
+{
+    transform: scale(1.3);
+}
+
+.container .layer a i
+{
+    color: transparent;
+}
+
+.container:hover .layer a i
+{
+    color: var(--second-color);
+}
+
+@media (max-width: 750px)
+{
+    .catalogue-content
+    {
+        display: grid;
+        grid-template-columns: repeat(1, 300px);
+        align-items: center;
+        gap: 2rem;
+    }
+}

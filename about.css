@@ -1,0 +1,20 @@
+:root
+{
+    --main-color: #7A0B08;
+    --second-color: #E7E7E7;
+
+    --corner-radius: 10px;
+    --font-btn: 18px;
+}
+
+#about i
+{
+    border-radius: var(--corner-radius);
+    border: 2px var(--main-color) solid;
+    background: var(--second-color);
+}
+
+#about i:hover
+{
+    text-decoration: none;
+}
